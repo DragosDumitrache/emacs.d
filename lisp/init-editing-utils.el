@@ -21,7 +21,7 @@
  case-fold-search t
  column-number-mode t
  delete-selection-mode t
- ediff-split-window-function 'split-window-horizontally
+ ediff-split-window-function 'split-window-vertically
  ediff-window-setup-function 'ediff-setup-windows-plain
  indent-tabs-mode nil
  make-backup-files nil

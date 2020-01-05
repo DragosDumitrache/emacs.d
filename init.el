@@ -55,8 +55,8 @@
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
 (require 'init-osx-keys)
+(require 'init-themes)
 (require 'init-gui-frames)
 (require 'init-dired)
 (require 'init-isearch)
@@ -104,6 +104,7 @@
 (require 'init-elm)
 (require 'init-purescript)
 (require 'init-ruby)
+(require 'init-rust)
 (require 'init-rails)
 (require 'init-sql)
 (require 'init-rust)

@@ -2,9 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-(defvar after-make-console-frame-hooks '()
+(defvar after-make-console-frame-hooks '(lambda () (add-to-list 'default-frame-alist '(fullscreen . maximized)))
   "Hooks to run after creating a new TTY frame")
-(defvar after-make-window-system-frame-hooks '()
+
+(defvar after-make-window-system-frame-hooks '(lambda () (add-to-list 'default-frame-alist '(fullscreen . maximized)))
   "Hooks to run after creating a new window-system frame")
 
 (defun run-after-make-frame-hooks (frame)

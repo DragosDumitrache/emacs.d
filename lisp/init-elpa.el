@@ -65,6 +65,7 @@ locate PACKAGE."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+
 
 ;; package.el updates the saved version of package-selected-packages correctly only
 ;; after custom-file has been loaded, which is a bug. We work around this by adding
@@ -111,6 +112,7 @@ locate PACKAGE."
 
 (add-hook 'package-menu-mode-hook 'sanityinc/maybe-widen-package-menu-columns)
 
+(require-package 'use-package)
 
 (provide 'init-elpa)
 ;;; init-elpa.el ends here

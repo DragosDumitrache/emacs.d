@@ -77,5 +77,13 @@
       (browse-url (concat "file://" file-name)))))
 
 
+;; Config reload
+(defun load-current-file ()
+  "Load current buffer file."
+  (interactive)
+  (load-file buffer-file-name))
+(global-set-key (kbd "C-c C-l") 'load-current-file)
+
+
 (provide 'init-utils)
 ;;; init-utils.el ends here

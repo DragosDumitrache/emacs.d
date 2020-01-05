@@ -10,7 +10,7 @@
 (setq custom-safe-themes t)
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(sanityinc-tomorrow-bright))
+(setq-default custom-enabled-themes '(base16-snazzy))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -35,7 +35,7 @@
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (setq custom-enabled-themes '(sanityinc-tomorrow-bright))
+  (setq custom-enabled-themes '(base16-snazzy))
   (reapply-themes))
 
 
@@ -46,6 +46,11 @@
   (after-load 'dimmer
     (advice-add 'frame-set-background-mode :after (lambda (&rest args) (dimmer-process-all)))))
 
+(global-set-key (kbd "C-c t") 'load-theme)
+(use-package base16-theme
+  :ensure t
+  :config
+  (load-theme 'base16-snazzy))
 
 (provide 'init-themes)
 ;;; init-themes.el ends here

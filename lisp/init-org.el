@@ -414,5 +414,14 @@ typical word processor."
      (sqlite . t))))
 
 
+(use-package org-journal
+  :ensure t
+  :custom
+  (org-journal-dir "~/org/")
+  (org-journal-file-format "%Y/%m-%d.org")
+  (org-journal-date-format "%Y/%m-%d"))
+
+(setq org-journal-enable-agenda-integration t)
+
 (provide 'init-org)
 ;;; init-org.el ends here

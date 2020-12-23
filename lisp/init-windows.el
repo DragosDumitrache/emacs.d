@@ -102,8 +102,11 @@ Call a second time to restore the original window configuration."
 
 
 
-;; (unless (memq window-system '(nt w32))
-;;   (windmove-default-keybindings 'control))
+(unless (memq window-system '(nt w32))
+  (require-package 'windswap)
+  (add-hook 'after-init-hook (apply-partially 'windmove-default-keybindings 'control))
+  (add-hook 'after-init-hook (apply-partially 'windswap-default-keybindings 'shift 'control)))
+
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
 
